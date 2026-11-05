@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学习路径 - TryGit</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">✦</span> TryGit
+      </a>
+      <button class="menu-toggle" aria-label="打开菜单">☰</button>
+      <nav class="site-nav">
+        <a href="index.html">首页</a>
+        <a href="about.html">实验室介绍</a>
+        <a href="path.html" class="active">学习路径</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="article-header">
+    <div class="container-narrow">
+      <h1>电子创新分中心实验室 学习路径</h1>
+      <p>给新入组的人一条能照着走的线：从“没进过实验室”到“能独立交付一台整机、能带队参赛”。</p>
+    </div>
+  </section>
+
+  <div class="container-narrow">
+    <article class="article-content">
+      <h2>一、这份路径是什么</h2>
+      <p>给新入组的人一条能照着走的线：从“没进过实验室”到“能独立交付一台整机、能带队参赛”。三个阶段不变——有交付物、有判据、有证据。任何一节的“会”，都以“能现场做出来并讲清为什么”为准，不以看过视频、抄过例程为准。</p>
+      
+      <div class="highlight-box">
+        <p><strong>核心节奏按学年校历排：</strong>前期基本全线上，第 13 周第一次分层，第 17 周第一场比赛后定资格，第 18–20 周期末冻结。</p>
+      </div>
+
+      <h2>二、路径总览</h2>
+      <ul>
+        <li><strong>L0 元技能</strong>｜第 5 周前起，全程｜工具链、Git、C 语言、文档与证据｜出口：每张任务卡都带提交号与一页记录</li>
+        <li><strong>L1 单板子</strong>｜第 5–8 周｜T1–T4，只碰一块开发板｜出口：能独立点亮、读传感器、自己画板并焊回</li>
+        <li><strong>L2 上小车</strong>｜第 8–13 周｜T5–T8｜出口：稳定循迹约 1 米（硬门槛）</li>
+        <li><strong>L3 整机与专精</strong>｜第 13–17 周｜三块专精 + 一台整机｜出口：五项基本功抽考 + 寒假交一辆完整的车</li>
+        <li><strong>L4 立项与赛事</strong>｜大一下–大二｜立项、电赛集训、赛事专攻｜出口：立项结题 + 实际参赛</li>
+        <li><strong>L5 带人</strong>｜大二–大三｜专精主责、小组负责人、出题带训｜出口：能带一个小组交付</li>
+      </ul>
+
+      <h2>三、L0 元技能（贯穿全程，第 5 周前起）</h2>
+      <p>要会：工具链装好并能烧录（01-01）；Git 的提交、回退、分支、合并、tag（01-02）；Docker 让环境可复现（01-03）；一页实验记录（01-04）；C 语言的类型与运算（01-05）、流程与函数（01-07）；调试与日志库（01-06）。</p>
+      <p><strong>交付：</strong>一条可复现的 Issue + 一次已合并的 PR；每个可运行版本一个 tag；每周一页记录（做了什么 / 怎么做 / 证据 / 下一步）。</p>
+      <p><strong>判据：</strong>别人拿你的提交号能复现出同样的结果；报错原文照抄，不转述。</p>
+      <p><strong>为什么先学这个：</strong>工具、文档、证据这三样，在比赛现场决定的是“能不能证明是你做的”。</p>
+
+      <h2>四、L1 单板子（第 5–8 周）</h2>
+      <p><strong>平台：</strong>STM32C8T6 最小系统板 + 面包板，材料自备、成本低；平台不强制统一，但要求选竞赛目录赛事支持的板子。</p>
+      <p><strong>四张卡：</strong>T1 点灯 → T2 按键与串口 → T3 ADC 采集 + 蓝牙透传 + 查数据手册 + 嘉立创 EDA 画接口扩展板并下单打样 → T4 I2C OLED 同屏显示原始值与滤波值，并焊回自己打样的板子。</p>
+      <p><strong>判据（自己问自己五个问题）：</strong>引脚和时钟为什么这么配；按键为什么要去抖；ADC 读到的数为什么抖、滤波后差多少（给数据）；蓝牙收到的数与屏幕上的数对不对得上；焊完第一件事做什么（目视查短路、分段上电）。</p>
+
+      <h2>五、L2 上小车（第 8–13 周）</h2>
+      <p><strong>四张卡：</strong>T5 定时器、PWM 与电机（含舵机与串口控制）→ T6 循迹 → T7 稳定循迹约 1 米（硬门槛）→ T8 演示。</p>
+      <p><strong>判据：</strong>车能稳定跑完 1 米，不是“跑起来就算”；能说出每一处该放在主循环还是中断里、为什么；脱线时能判断是阈值、供电还是控制参数的问题。</p>
+
+      <h2>六、L3 整机与专精（第 13–17 周）</h2>
+      <p><strong>组队形态：</strong>3 人一个小队，3 个小队组成一个小组（9 人），一个小组只对标一项赛事。</p>
+      <p><strong>全员基础（五项基本功）：</strong>接线复检 / 烧录 / 串口与 OLED 自检 / 跑通循迹 / 定位并复现一次故障。</p>
+      
+      <h3>三块专精（每块至少两人会）：</h3>
+      <ul>
+        <li><strong>结构与制造</strong>：器件识别 → 嘉立创 EDA 画板打样 → 焊接调试 → 电源设计 → Fusion 360 建模打印。验收：自己画的板能稳定驱动电机。</li>
+        <li><strong>控制与执行</strong>：状态机 → 电机调速 → 编码器测速 → PID 调参 → 异常恢复。验收：能解释每个 PID 参数为什么是这个值。</li>
+        <li><strong>感知与通信</strong>：多路阵列 / ToF 标定 → OpenCV → YOLO → 串口与蓝牙协议。验收：给出坐标精度与刷新率的实测值。</li>
+      </ul>
+
+      <h2>七、L4 立项与赛事（大一下——大二）</h2>
+      <p><strong>立项的唯一准入规则：</strong>完整立项说明 + 开源资料。做法是“复刻 → 移植”：先找一个开源原型跑通，再换一个变量改通，最后按预先约定的接口接进整机。</p>
+      <p><strong>平台切换：</strong>电赛准备阶段从 STM32C8T6 换到 MSPM0G3507，下载调试工具随之更换——ST-Link 烧不了 TI 芯片。</p>
+      <p><strong>赛事专攻：</strong>一个周期只专攻一项，周期按赛事自身节奏；必须限制报名人数；只为领免费板子的不算专攻项。</p>
+
+      <h2>八、九、十（精简版）</h2>
+      <h3>L5 带人</h3>
+      <p>把一块专精做成能交接的东西（一页交接文档 + 一段关键操作录屏 + 代码与原理图入仓），能给别人讲清“为什么这条只能算待验证”。</p>
+      
+      <h3>六级自查</h3>
+      <p><strong>0 不会｜1 了解｜2 会改｜3 会做（有实测数据）｜4 熟练（能教、能现场排障）。</strong> 铁律：写 3 分要能给出证据，没证据只能算 0–1 分。</p>
+
+      <h3>每阶段最常见的卡点</h3>
+      <ul>
+        <li><strong>照抄例程，改不动一个参数：</strong>缺少“先预测再验证”的环节。</li>
+        <li><strong>代码能跑但讲不清：</strong>没走“解释为什么”这一阶。</li>
+        <li><strong>数据没有条件：</strong>记了值没记条件（电压、地面、速度档），数字必须带条件。</li>
+        <li><strong>AI 代写：</strong>前期禁用就是防这个。判定看现场追问，不看代码漂不漂亮。</li>
+      </ul>
+
+      <hr>
+      <p style="text-align: center; color: var(--primary); font-weight: 600; font-size: 1.1em;">
+        路径的终点不是“学完了”，是能独立交付、能说清取舍、能把方法交给下一个人。
+      </p>
+    </article>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 TryGit 实验室. 保留所有权利.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="回到顶部">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>
